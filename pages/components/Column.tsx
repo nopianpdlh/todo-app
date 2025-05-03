@@ -1,15 +1,17 @@
 import { useDroppable } from "@dnd-kit/core";
 import { IColumn, ITask } from "../types/Task";
 import TaskCard from "./TaskCard";
+import { ISelectedTask } from "../types/Task";
 
 interface ColumnProps {
   column: IColumn;
   tasks: ITask[];
   key?: string;
+  setSelectedTask: ({ activity, task }: ISelectedTask) => void;
 }
 
 const Column = (props: ColumnProps) => {
-  const { column, tasks, key } = props;
+  const { column, tasks, key, setSelectedTask } = props;
   const { setNodeRef, over } = useDroppable({
     id: column.id,
   });
@@ -24,7 +26,11 @@ const Column = (props: ColumnProps) => {
       <h2 className="mb-4 font-semibold text-neutral-700">{column.title}</h2>
       <div ref={setNodeRef} className=" flex flex-col gap-4  flex-1">
         {tasks.map((task, index) => (
-          <TaskCard key={`${column.id}-${index}`} task={task} />
+          <TaskCard
+            setSelectedTask={setSelectedTask}
+            key={`${column.id}-${index}`}
+            task={task}
+          />
         ))}
       </div>
     </div>
