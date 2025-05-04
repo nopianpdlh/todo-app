@@ -1,4 +1,4 @@
-import { IColumn, ITask } from "../pages/types/Task";
+import { IColumn, ITask } from "@/types/Task";
 
 const COLUMNS: IColumn[] = [
   {
