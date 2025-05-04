@@ -1,8 +1,8 @@
 import { useDraggable } from "@dnd-kit/core";
-import { ITask } from "../types/Task";
+import { ITask } from "../../types/Task";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { useState } from "react";
-import { ISelectedTask } from "../types/Task";
+import { ISelectedTask } from "../../types/Task";
 
 interface TaskCardProps {
   task: ITask;

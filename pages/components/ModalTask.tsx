@@ -1,6 +1,6 @@
 import { FormEvent } from "react";
 import Button from "@/pages/components/Button";
-import { ITask } from "@/pages/types/Task";
+import { ITask } from "@/types/Task";
 interface ModalTaskProps {
   type?: "add" | "Update" | "Delete";
   selectedTask?: ITask;

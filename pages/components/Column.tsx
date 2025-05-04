@@ -1,7 +1,7 @@
 import { useDroppable } from "@dnd-kit/core";
-import { IColumn, ITask } from "../types/Task";
+import { IColumn, ITask } from "../../types/Task";
 import TaskCard from "./TaskCard";
-import { ISelectedTask } from "../types/Task";
+import { ISelectedTask } from "../../types/Task";
 
 interface ColumnProps {
   column: IColumn;

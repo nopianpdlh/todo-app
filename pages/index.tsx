@@ -1,9 +1,9 @@
 import Button from "@/pages/components/Button";
-import { COLUMNS, INITIAL_TASKS } from "./constants/Task.constants";
+import { COLUMNS, INITIAL_TASKS } from "../constants/Task.constants";
 import Column from "./components/Column";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { FormEvent, useEffect, useState } from "react";
-import { ITask } from "./types/Task";
+import { ITask } from "../types/Task";
 import ModalTask from "./components/ModalTask";
 import ModalConfirm from "./components/ModalConfirm";
 const App = () => {
