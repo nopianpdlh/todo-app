@@ -1,12 +1,12 @@
-import Button from "@/pages/components/Button";
+import Button from "@/components/Button";
 import { COLUMNS, INITIAL_TASKS } from "@/constants/Task.constants";
-import Column from "./components/Column";
+import Column from "@/components/Column";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { FormEvent, useEffect, useState } from "react";
 import { ITask } from "@/types/Task";
-import ModalTask from "./components/ModalTask";
-import ModalConfirm from "./components/ModalConfirm";
-const App = () => {
+import ModalTask from "@/components/ModalTask";
+import ModalConfirm from "@/components/ModalConfirm";
+const HomePage = () => {
   const [tasks, setTasks] = useState<ITask[]>([...INITIAL_TASKS]);
   const [showModalAddTask, setShowModalAddTask] = useState(false);
   const [selectedTask, setSelectedTask] = useState<{
@@ -126,4 +126,4 @@ const App = () => {
     </main>
   );
 };
-export default App;
+export default HomePage;

@@ -1,5 +1,5 @@
 import { FormEvent } from "react";
-import Button from "@/pages/components/Button";
+import Button from "@/components/Button";
 import { ITask } from "@/types/Task";
 interface ModalTaskProps {
   type?: "add" | "Update" | "Delete";
