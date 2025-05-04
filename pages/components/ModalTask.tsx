@@ -2,7 +2,7 @@ import { FormEvent } from "react";
 import Button from "@/pages/components/Button";
 import { ITask } from "@/pages/types/Task";
 interface ModalTaskProps {
-  type?: "add" | "Update";
+  type?: "add" | "Update" | "Delete";
   selectedTask?: ITask;
   onCancel: () => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;

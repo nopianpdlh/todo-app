@@ -5,6 +5,7 @@ import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { FormEvent, useEffect, useState } from "react";
 import { ITask } from "./types/Task";
 import ModalTask from "./components/ModalTask";
+import ModalConfirm from "./components/ModalConfirm";
 const App = () => {
   const [tasks, setTasks] = useState<ITask[]>([...INITIAL_TASKS]);
   const [showModalAddTask, setShowModalAddTask] = useState(false);
@@ -71,6 +72,13 @@ const App = () => {
     setSelectedTask(null);
   };
 
+  const handleDeleteTask = () => {
+    setTasks((prevTasks) =>
+      prevTasks.filter((task) => task.id !== selectedTask?.task.id)
+    );
+    setSelectedTask(null);
+  };
+
   return (
     <main className="min-h-screen p-4 flex flex-col">
       <div className="mb-8 flex items-center justify-between">
@@ -104,6 +112,15 @@ const App = () => {
           onCancel={() => setSelectedTask(null)}
           selectedTask={selectedTask.task}
           type="Update"
+        />
+      )}
+      {selectedTask?.activity === "delete" && (
+        <ModalConfirm
+          onConfirm={handleDeleteTask}
+          onCancel={() => setSelectedTask(null)}
+          message="Are you sure you want to delete this task?"
+          title="Delete Task"
+          type="Delete"
         />
       )}
     </main>

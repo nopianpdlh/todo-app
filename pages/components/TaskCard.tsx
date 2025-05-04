@@ -32,16 +32,20 @@ const TaskCard = (props: TaskCardProps) => {
       style={style}
       className="flex justify-between cursor-grab rounded-lg bg-neutral-50 p-4 shadow-sm hover:shadow-md "
     >
-      <div>
-        <h3 className="font-medium text-neutral-700 ">{task.title}</h3>
-        <p className="mt-2 text-sm text-neutral-500">{task.description}</p>
+      <div className="flex flex-col max-w-full ">
+        <h3 className="font-medium text-neutral-700 break-words max-w-full ">
+          {task.title}
+        </h3>
+        <p className="mt-2 text-sm text-neutral-500 break-words max-w-full">
+          {task.description}
+        </p>
       </div>
       <div
         className="cursor-pointer relative h-fit "
         onMouseEnter={() => setShowDropDown(true)}
         onMouseLeave={() => setShowDropDown(false)}
       >
-        <HiDotsHorizontal />
+        <HiDotsHorizontal className="" />
         <div
           className={`absolute right-0 top-0 p-2 w-48  rounded-lg bg-white shadow-md transition-all duration-200 ${
             showDropDown ? "flex flex-col" : "hidden"
