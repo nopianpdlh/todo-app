@@ -1,40 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+✅ Todo App — Simple and Interactive Task Manager with Drag & Drop
+Todo App is a modern and minimalist task management application built using Next.js 15, React 19, Tailwind CSS v4, and enhanced with @dnd-kit for smooth drag-and-drop functionality.
+This app provides a clean and responsive interface to manage your daily tasks efficiently.
 
-## Getting Started
+✨ Key Features
+✅ Add, delete, and manage tasks easily
 
-First, run the development server:
+🧩 Drag and drop support via @dnd-kit/core
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🎨 Styled with Tailwind CSS v4 for a clean UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚛️ Built with React 19 and Next.js 15 using Turbopack
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+💡 Component-based and scalable project structure
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+📱 Fully responsive design for desktop and mobile
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+🎯 Icons powered by react-icons
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🛠️ Tech Stack
+Next.js 15.3.1 (with App Router and Turbopack)
 
-## Learn More
+React 19
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS 4
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+TypeScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+@dnd-kit/core for drag & drop
 
-## Deploy on Vercel
+react-icons
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
